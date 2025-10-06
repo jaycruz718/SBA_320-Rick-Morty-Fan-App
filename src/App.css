@@ -40,7 +40,6 @@ nav {
   color: white;
 }
 
-
 .nav-list li a:focus {
   outline: 2px dashed white;
   outline-offset: 2px;
