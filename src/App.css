@@ -5,3 +5,11 @@
   text-align: center;
 }
 
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem; /* optional spacing between links */
+}
+

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Home from './Pages/Home';
 import Episodes from './Pages/Episodes';
 import Locations from './Pages/Locations';
@@ -24,7 +24,7 @@ function App() {
   }, []);
 
     return (
-    <Router> {/* ✅ Only ONE Router here */}
+    
       <div className="App">
         <h1>Rick and Morty Fan App</h1>
 
@@ -44,7 +44,6 @@ function App() {
           <Route path="/location" element={<Locations />} />
         </Routes>
       </div>
-    </Router>
   );
 }
 
