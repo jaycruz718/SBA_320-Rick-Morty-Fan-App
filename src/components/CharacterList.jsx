@@ -1,40 +1,28 @@
 import React, { useEffect, useState } from 'react';
 
-const CharacterList = () => {
-    const [characters, setCharacters] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+const Characters = () => {
+  const [characters, setCharacters] = useState([]);
 
-    useEffect(() => {
-        const fetchCharacters = async () => {
-            try {
-                const response = await fetch('https://rickandmortyapi.com/api/character');
-                const data = await response.json();
-                setCharacters(data.results);
-                setLoading(false);
-            } catch (err) {
-                setError('Failed to fetch characters');
-                setLoading(false);
-            }
-        };
+  useEffect(() => {
+    fetch('https://rickandmortyapi.com/api/character')
+      .then(res => res.json())
+      .then(data => setCharacters(data.results))
+      .catch(error => console.error('Error fetching characters:', error));
+  }, []);
 
-        fetchCharacters();
-    }, []);
-
-    if(loading) return <p>Loading characters...</p>;
-    if (error) return <p>{error}</p>;
-
-    return (
-        <div className="character-list">
-            <h2>Rick and Morty Characters</h2>
-            <ul>
-                {characters.map((character) => (
-                    <li key={character.id}>
-                        <img src="{character.image}" alt="{character.name}" />
-                        <p>{character.name}</p>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+  return (
+    <div>
+      <h2>Characters</h2>
+      <div className="character-grid">
+        {characters.map(character => (
+          <div key={character.id} className="card">
+            <img src={character.image} alt={character.name} />
+            <p>{character.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
+
+export default Characters;
