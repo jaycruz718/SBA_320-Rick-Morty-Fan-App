@@ -3,9 +3,11 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: green;
-  color: white;
+  color: rgb(247, 247, 247);
   display: flex;
   justify-content: center;
+  background: linear-gradient(135deg, #2c6f2c, #4caf50);
+
 }
 
 .App {
@@ -30,9 +32,17 @@ nav {
   text-decoration: none;
   color: blue;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .nav-list li a:hover {
   text-decoration: underline;
   color: white;
 }
+
+
+.nav-list li a:focus {
+  outline: 2px dashed white;
+  outline-offset: 2px;
+}
+

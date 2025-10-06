@@ -1,0 +1,16 @@
+.home-container {
+  background-image: url('https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg');
+
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+
+  min-height: 100vh;           
+  color: black;                 
+  padding: 2rem;              
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); 
+}
