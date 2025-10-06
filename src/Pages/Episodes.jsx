@@ -13,7 +13,7 @@ const Episodes = () => {
   return (
     <div>
       <h2>Episodes</h2>
-      <ul>
+      <ul style={{ listStyleType: 'none', padding: 0 }}>
         {episodes.map(episode => (
           <li key={episode.id}>
             {episode.episode} - {episode.name} ({episode.air_date})

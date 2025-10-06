@@ -29,7 +29,7 @@ function App() {
         <h1>Rick and Morty Fan App</h1>
 
         <nav>
-          <ul>
+          <ul className="nav-list">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/characters">Characters</Link></li>
             <li><Link to="/episodes">Episodes</Link></li>

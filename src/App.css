@@ -1,15 +1,38 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.App {
   padding: 2rem;
   text-align: center;
 }
 
-.nav-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1rem; /* optional spacing between links */
+nav {
+  margin-bottom: 2rem;
 }
 
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.nav-list li a:hover {
+  text-decoration: underline;
+  color: white;
+}
